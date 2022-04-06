@@ -18,6 +18,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
+    <!--  IMP here, adding Spring dependencies  -->
     <dependencies>
         <!--  SPRING CORE DEPENDENCY -->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
@@ -27,7 +28,7 @@
             <version>5.3.14</version>
         </dependency>
 
-<!--        SPRING CONTEXT DEPENDENCY-->
+        <!--        SPRING CONTEXT DEPENDENCY-->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -42,7 +43,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 
 
     <build>

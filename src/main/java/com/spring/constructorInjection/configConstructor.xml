@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--now Person class is depends on Certi class, hence we need to create Certi class first-->
+    <bean class="com.spring.constructorInjection.Certi" name="certi1">
+        <constructor-arg type="String" value="My Certifate"/>
+    </bean>
+
+    <!-- note, creating beans using constructor injection technique-->
+    <bean class="com.spring.constructorInjection.Person" name="person1">
+
+        <!--imp, for constr injection we use <constructor-arg>
+        here 'type' attribute is used to remove ambiguity in some cases, better to  use-->
+        <!--we can add references to other objects using 'ref' attribute-->
+        <!--note, The exact index of the argument in the constructor argument list.-->
+        <constructor-arg type="String" value="Ayush" index=""/>
+        <constructor-arg type="int" value="99"/>
+        <constructor-arg ref="certi1"/>
+
+        <!-- OR        <constructor-arg>-->
+        <!--               <value>Ayush</value>-->
+        <!--           </constructor-arg>-->
+    </bean>
+
+</beans>

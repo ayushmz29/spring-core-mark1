@@ -15,7 +15,7 @@ public class App {
         //put config file inside
         //if we have a single file then we can just specify a string and in-case of multiple files we can specify array
         // ApplicationContext context = new ClassPathXmlApplicationContext (new String [] {"services.xml", "daos.xml"}).
-        ApplicationContext context = new ClassPathXmlApplicationContext("file:src/main/java/config.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("file:src/main/java/org/example/config.xml");
 
         //to get the bean (here, it's student object), using 'getBean()' to insert beans into the ApplicationContext
         Student s1 = (Student) context.getBean("student1");

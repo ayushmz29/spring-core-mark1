@@ -12,19 +12,19 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-    <!--    1st Beans -->
+
+    <!-- note,   1st Beans -->
     <!-- Specify the className of which you want to create bean(object) in 'class' attribute
         and give a name to this bean to uniquely identify this bean     -->
     <bean class="org.example.Student" name="student1">
-        <!-- collaborators and configuration for this bean go here -->
 
-        <!-- here setter injection is used because we are using property tag-->
+        <!--note, here setter injection is used because we are using <property> tag-->
         <!-- specify the name of the variable present inside the class we want to create object in 'name' attribute -->
         <property name="studentId">
             <value>8777</value>
         </property>
 
-        <!-- alternate way of setting value using 'value' attribute  -->
+        <!-- note, alternate way of setting value using 'value' attribute  -->
         <!--  set value of private var 'studentName'(inside Student Class) using 'name' and 'value' attributes      -->
         <property name="studentName" value="Ayush"/>
 

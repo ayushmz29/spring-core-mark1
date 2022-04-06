@@ -10,7 +10,6 @@ public class Student {
     // parametrized constructor
     public Student(int id, String name, String address) {
         super();
-        this.studentId = id;
         this.studentName = name;
         this.studentAddress = address;
     }
